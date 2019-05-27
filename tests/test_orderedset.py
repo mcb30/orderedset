@@ -371,6 +371,21 @@ class TestOrderedset(unittest.TestCase):
         self.assertGreater(oset1, set(oset3))
         self.assertGreater(oset1, list(oset3))
 
+        oset4 = OrderedSet(self.lst[1:])
+
+        self.assertFalse(oset3 < oset4)
+        self.assertFalse(oset3 < set(oset4))
+        self.assertFalse(oset3 < list(oset4))
+        self.assertFalse(oset3 >= oset4)
+        self.assertFalse(oset3 >= set(oset4))
+        self.assertFalse(oset3 >= list(oset4))
+        self.assertFalse(oset3 < oset4)
+        self.assertFalse(oset3 < set(oset4))
+        self.assertFalse(oset3 < list(oset4))
+        self.assertFalse(oset3 >= oset4)
+        self.assertFalse(oset3 >= set(oset4))
+        self.assertFalse(oset3 >= list(oset4))
+
 
 if __name__ == '__main__':
     unittest.main()
